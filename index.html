@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My HTML Practice Week</title>
+
+  <!-- DAY 2 TASK: swap this font. Pick one at fonts.google.com, paste its <link> here,
+       then change font-family in the CSS below. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== DAY 2: COLORS & FONTS live here. Change a value, save, refresh. ===== */
+    :root {
+      --bg: #f4f6fb;          /* page background */
+      --card: #ffffff;        /* card background */
+      --text: #1f2937;        /* main text color */
+      --accent: #2563eb;      /* buttons, links, highlights */
+      --accent-dark: #1d4ed8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;   /* DAY 2: change the font here */
+      background: var(--bg);                        /* DAY 5: try a gradient or image here */
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--accent), #7c3aed);
+      color: white;
+      padding: 48px 20px 32px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 8px; font-size: 2rem; }
+    header p  { margin: 0; opacity: .9; }
+
+    nav { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    nav a {
+      color: white; text-decoration: none; font-size: .9rem;
+      background: rgba(255,255,255,.18); padding: 6px 14px; border-radius: 999px;
+    }
+    nav a:hover { background: rgba(255,255,255,.35); }
+
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 60px; }
+
+    section {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.06);
+    }
+    section h2 { margin-top: 0; color: var(--accent); }
+    section a { color: var(--accent); }
+
+    pre {
+      background: #111827; color: #e5e7eb;
+      padding: 12px 14px; border-radius: 8px;
+      overflow-x: auto; font-size: .85rem;
+    }
+    .task { background: #fef9c3; border-left: 5px solid #eab308; padding: 10px 14px; border-radius: 6px; }
+    .task ul { margin: 6px 0 0; padding-left: 20px; }
+    .demo { border: 2px dashed #cbd5e1; border-radius: 10px; padding: 14px; margin: 12px 0; }
+
+    /* DAY 3: image styling */
+    .demo img { max-width: 100%; height: auto; border-radius: 10px; display: block; }
+
+    /* DAY 5: background demo boxes */
+    .bg-color    { background-color: #fde68a; padding: 16px; border-radius: 8px; }
+    .bg-gradient { background: linear-gradient(90deg, #f472b6, #60a5fa); color: white; padding: 16px; border-radius: 8px; }
+    .bg-image    { /* DAY 5 TASK: put your photo in the repo and point to it here */
+      background-image: url("photo.jpg");
+      background-size: cover; background-position: center;
+      background-color: #334155;   /* shows if the photo is missing */
+      color: white; padding: 40px 16px; border-radius: 8px; text-shadow: 0 1px 4px rgba(0,0,0,.7);
+    }
+
+    /* DAY 6: layout demo */
+    .row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .box { flex: 1 1 140px; background: #dbeafe; border: 2px solid var(--accent); padding: 14px; border-radius: 8px; text-align: center; }
+
+    /* DAY 4: button-style link */
+    .btn {
+      display: inline-block; background: var(--accent); color: white !important;
+      padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600;
+    }
+    .btn:hover { background: var(--accent-dark); }
+
+    footer { text-align: center; padding: 20px; color: #64748b; font-size: .85rem; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- DAY 1 TASK: change this heading and subtitle to your own words -->
+    <h1>My HTML Practice Week</h1>
+    <p>Edit this file, save, refresh, and watch the page change.</p>
+    <nav>
+      <!-- These are ANCHOR links: href="#id" jumps to the element with that id (see Day 4) -->
+      <a href="#setup">Setup</a>
+      <a href="#day1">Day 1</a>
+      <a href="#day2">Day 2</a>
+      <a href="#day3">Day 3</a>
+      <a href="#day4">Day 4</a>
+      <a href="#day5">Day 5</a>
+      <a href="#day6">Day 6</a>
+      <a href="#day7">Day 7</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= SETUP ================= -->
+    <section id="setup">
+      <h2>Setup: Publish It (20 min)</h2>
+      <ol>
+        <li>Save this file as <code>index.html</code> (that exact name).</li>
+        <li>On GitHub, create a new <strong>public</strong> repository and upload <code>index.html</code>.</li>
+        <li>Go to <strong>Settings → Pages</strong>. Under "Branch" choose <code>main</code> and <code>/ (root)</code>, then Save.</li>
+        <li>Wait a minute or two. Your site appears at <code>https://YOUR-USERNAME.github.io/REPO-NAME/</code></li>
+        <li><strong>Edit loop:</strong> change the file on GitHub (pencil icon) → Commit → wait ~1 min → refresh the site.</li>
+      </ol>
+      <p>Tip: while learning, you can also double-click <code>index.html</code> on your computer to preview changes instantly, no upload needed.</p>
+    </section>
+
+    <!-- ================= DAY 1 ================= -->
+    <section id="day1">
+      <h2>Day 1: Text &amp; Tags</h2>
+      <p>HTML is built from <strong>tags</strong>. Most come in pairs: an opening tag and a closing tag with a <code>/</code>.</p>
+<pre>&lt;h1&gt;Big heading&lt;/h1&gt;      (h1 to h6, biggest to smallest)
+&lt;p&gt;A paragraph.&lt;/p&gt;
+&lt;strong&gt;bold&lt;/strong&gt; &lt;em&gt;italic&lt;/em&gt;
+&lt;br&gt;                       (line break, no closing tag)
+&lt;ul&gt;&lt;li&gt;item&lt;/li&gt;&lt;/ul&gt;    (bulleted list)</pre>
+      <div class="demo">
+        <h3>I am an h3 heading</h3>
+        <p>This is a paragraph with <strong>bold</strong>, <em>italic</em>, and a<br>line break.</p>
+        <ul><li>First item</li><li>Second item</li></ul>
+      </div>
+      <div class="task"><strong>Task (30 min)</strong>
+        <ul>
+          <li>Change the page title and header text at the top.</li>
+          <li>Edit the demo above: rewrite the paragraph, add a third list item, add an h2.</li>
+          <li>Open DevTools: right-click the page → Inspect. Hover elements to see their tags.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= DAY 2 ================= -->
+    <section id="day2">
+      <h2>Day 2: Colors &amp; Fonts</h2>
+      <p>Styling is done with <strong>CSS</strong>, inside the <code>&lt;style&gt;</code> block at the top. Each rule is <code>property: value;</code></p>
+<pre>color: #2563eb;            /* text color (hex, name, or rgb) */
+background-color: tomato;
+font-family: "Poppins", sans-serif;
+font-size: 20px;
+font-weight: 700;          /* bold */</pre>
+      <div class="demo">
+        <p style="color: crimson; font-size: 22px; font-weight: 700;">I'm styled right on the tag with <code>style="..."</code> (inline CSS).</p>
+      </div>
+      <div class="task"><strong>Task (30 min)</strong>
+        <ul>
+          <li>In <code>:root</code> at the top of the CSS, change <code>--accent</code> to a new hex color. The whole site updates.</li>
+          <li>Pick a Google Font, replace the <code>&lt;link&gt;</code> in the head, and update <code>font-family</code> in <code>body</code>.</li>
+          <li>Change the inline demo above to a different color and size.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= DAY 3 ================= -->
+    <section id="day3">
+      <h2>Day 3: Adding &amp; Editing Photos</h2>
+      <p>Upload your photo to the same GitHub repo, then point to it with <code>&lt;img&gt;</code>.</p>
+<pre>&lt;img src="photo.jpg" alt="Describe the photo" width="300"&gt;</pre>
+      <ul>
+        <li><code>src</code> = the file name (must match exactly, including capitals and .jpg vs .jpeg)</li>
+        <li><code>alt</code> = text for screen readers and broken images</li>
+        <li><code>width</code> = size in pixels</li>
+      </ul>
+      <div class="demo">
+        <!-- DAY 3 TASK: replace this built-in placeholder with src="photo.jpg" after uploading your photo -->
+        <img alt="Placeholder image: replace me"
+             width="300"
+             src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='320'><rect width='100%' height='100%' fill='%2394a3b8'/><text x='50%' y='50%' font-size='28' fill='white' text-anchor='middle' dominant-baseline='middle' font-family='Arial'>Your photo goes here</text></svg>">
+      </div>
+      <div class="task"><strong>Task (30 min)</strong>
+        <ul>
+          <li>Upload a photo to your repo and swap the <code>src</code> above to its file name.</li>
+          <li>Change <code>width="300"</code> to other numbers. Rewrite the <code>alt</code> text.</li>
+          <li>In the CSS, find <code>.demo img</code> and change <code>border-radius: 10px</code> to <code>50%</code> for a circle (works best on a square photo).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= DAY 4 ================= -->
+    <section id="day4">
+      <h2>Day 4: Links &amp; Anchors</h2>
+      <p>The <code>&lt;a&gt;</code> (anchor) tag makes links. Its <code>href</code> says where to go.</p>
+<pre>&lt;a href="https://wikipedia.org"&gt;External link&lt;/a&gt;
+&lt;a href="https://wikipedia.org" target="_blank"&gt;Opens in new tab&lt;/a&gt;
+&lt;a href="mailto:you@email.com"&gt;Email me&lt;/a&gt;
+&lt;a href="#day1"&gt;Jump to the element with id="day1"&lt;/a&gt;</pre>
+      <div class="demo">
+        <p><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs (new tab)</a></p>
+        <p><a href="#day1">Jump back up to Day 1</a> (an in-page anchor)</p>
+        <p><a class="btn" href="#setup">I'm a link styled as a button</a></p>
+      </div>
+      <div class="task"><strong>Task (30 min)</strong>
+        <ul>
+          <li>Add a link to your LinkedIn or any favorite site.</li>
+          <li>Make a "Back to top" link: add <code>id="top"</code> to the <code>&lt;header&gt;</code> and link to <code>#top</code>.</li>
+          <li>Wrap your photo from Day 3 in an <code>&lt;a&gt;</code> so clicking it goes somewhere.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= DAY 5 ================= -->
+    <section id="day5">
+      <h2>Day 5: Backgrounds</h2>
+      <p>Three kinds: solid color, gradient, and image. All use the <code>background</code> properties in CSS.</p>
+<pre>background-color: #fde68a;
+background: linear-gradient(90deg, pink, skyblue);
+background-image: url("photo.jpg");
+background-size: cover;   /* fill the box */</pre>
+      <div class="bg-color">Solid color background</div><br>
+      <div class="bg-gradient">Gradient background</div><br>
+      <div class="bg-image">Image background (shows your photo.jpg once uploaded)</div>
+      <div class="task" style="margin-top:14px;"><strong>Task (30 min)</strong>
+        <ul>
+          <li>Upload <code>photo.jpg</code> so the third box shows it. Try <code>background-size: contain</code> vs <code>cover</code>.</li>
+          <li>Change the gradient colors in <code>.bg-gradient</code>.</li>
+          <li>Change the <strong>whole page</strong> background: edit <code>--bg</code> in <code>:root</code>, or give <code>body</code> a gradient.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= DAY 6 ================= -->
+    <section id="day6">
+      <h2>Day 6: Layout &amp; Spacing</h2>
+      <p>A <code>&lt;div&gt;</code> is an invisible box used to group things. Give it a <code>class</code> to style it in CSS (see <code>.row</code> and <code>.box</code>).</p>
+<pre>padding: 20px;   /* space INSIDE the box */
+margin: 20px;    /* space OUTSIDE the box */
+border: 2px solid black;
+display: flex;   /* put children side by side */</pre>
+      <div class="row">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+      <div class="task" style="margin-top:14px;"><strong>Task (30 min)</strong>
+        <ul>
+          <li>Add a 4th <code>&lt;div class="box"&gt;</code>. Watch the row adjust.</li>
+          <li>In <code>.box</code>, change <code>padding</code>, <code>border</code>, and <code>background</code>. Try <code>gap</code> in <code>.row</code>.</li>
+          <li>Shrink your browser window to see it respond on a phone-size screen.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= DAY 7 ================= -->
+    <section id="day7">
+      <h2>Day 7: Mini Project</h2>
+      <p>Combine everything. Build a one-page "About Me" section below, using only what you learned.</p>
+      <div class="task"><strong>Checklist</strong>
+        <ul>
+          <li>A heading with your name (Day 1)</li>
+          <li>Your own colors and font (Day 2)</li>
+          <li>A photo of you or something you like, with alt text (Day 3)</li>
+          <li>At least two links, one opening in a new tab (Day 4)</li>
+          <li>A background gradient or image on one section (Day 5)</li>
+          <li>Three <code>.box</code> items in a row: e.g. Hobbies, Goals, Contact (Day 6)</li>
+        </ul>
+      </div>
+
+      <!-- YOUR PROJECT GOES BELOW THIS LINE -->
+      <div class="demo" id="my-project">
+        <h3>About Me</h3>
+        <p>Replace this with your own page content.</p>
+      </div>
+      <!-- YOUR PROJECT GOES ABOVE THIS LINE -->
+
+      <p><strong>Bonus ideas:</strong> add a second page (<code>about.html</code>) and link between them, try <code>&lt;button&gt;</code> and <code>&lt;table&gt;</code> tags, or add hover effects with <code>:hover</code>.</p>
+      <p><a href="#top-of-page" onclick="window.scrollTo(0,0); return false;">Back to top</a></p>
+    </section>
+
+  </main>
+
+  <footer>Built by me, one tag at a time.</footer>
+</body>
+</html>
